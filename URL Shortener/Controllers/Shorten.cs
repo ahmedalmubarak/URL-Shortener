@@ -19,7 +19,11 @@ namespace URL_Shortener.Controllers
             _service = service;
             _dbContext = context;
         }
-
+        /// <summary>
+        /// A method convert long URL to short one.
+        /// </summary>
+        /// <param name="request">Take the long URL</param>
+        /// <returns></returns>
         [HttpPost("shorten")]
         public async Task<IActionResult> ShortenAsync(ShortenerUrlRequest request)
         {
